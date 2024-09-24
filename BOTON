@@ -1,0 +1,19 @@
+void main(){
+ boton();
+ posicion();
+}
+
+
+
+void boton(){
+  rect(135,120, 70,70);
+  
+}
+
+
+void posicion(){
+  if (mousePressed){
+    ellipse(mouseX, mouseY, 135,120);}
+  
+  
+}
