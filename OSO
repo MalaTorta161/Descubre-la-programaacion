@@ -1,5 +1,5 @@
 void main() {
-	//orejas
+  //orejas
   ellipse(70,70,100,100);
   ellipse(250,70,100,100);
   //cara
@@ -9,7 +9,11 @@ void main() {
   //ojos
   ellipse(125,100,45,45);
   ellipse(200,100,45,45);
+  //pupilas
+  ellipse(141,100,10,10);
+  ellipse(183,100,10,10);
   //boca
   ellipse(163,220,55,50);
-
+  
+    
 }
