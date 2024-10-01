@@ -1,0 +1,21 @@
+int x=160;
+int y=160;
+
+void main(){
+ animate(ejecutar);
+}
+void ejecutar(){
+  player();
+  controles();
+}
+
+void player(){
+  background(255,0,0);
+  ellipse(x,y,10,15);
+}
+
+void controles(){
+  if (keyPressed && key=="up"){
+    print("hoola");
+    y = y -1;
+    }}
