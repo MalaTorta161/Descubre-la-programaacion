@@ -1,24 +1,36 @@
 void main(){
- boton();
- posicion();
- letras();
+ animate(BOTON);
+
+}
+void BOTON(){
+ 
+  PULSAR();
+  println("X:" + mouseX+ ";Y" + mouseY);
+  
+}
+
+void PULSAR(){
+ 
+  fill(115,162,245);
+  rect(90,70,150,40);
+  fill(0,0,0);
+  text("PULSA",133,97);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+  if (mousePressed);
+  animate(PULSAR1);
+  {
+   if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+   {
+    fill(76,243,97);
+   rect(90,70,150,40);
+   fill(0,0,0);
+   text("PULSA",133,97);
+  }
+  }
 }
 
 
-
-
-void boton(){
-  fill(179,80,80);
-  rect(135,120, 70,70);
+void PULSAR1(){
+ background(255,0,0);
   }
 
-
-void posicion(){
-  if (mousePressed){
-    ellipse(mouseX, mouseY, 135,120);} 
-}
-
-void letras(){
-    fill(255,255,255);
-  text("BOTON", 137,160);
-}
