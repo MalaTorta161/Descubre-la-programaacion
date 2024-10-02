@@ -1,12 +1,16 @@
 int x=160;
 int y=160;
 
-void main(){
+  
+  void main(){
  animate(ejecutar);
 }
 void ejecutar(){
   player();
-  controles();
+  arriba();
+  abajo();
+  derecha();
+  izquierda();
 }
 
 void player(){
@@ -14,8 +18,29 @@ void player(){
   ellipse(x,y,10,15);
 }
 
-void controles(){
+
+void arriba(){
   if (keyPressed && key=="up"){
-    print("hoola");
+    print("arriba");
     y = y -1;
-    }}
+    
+ 
+  
+  }}
+void abajo (){
+   if (keyPressed && key=="down"){
+    print("abajo");
+    y = y +1;
+   }}
+
+void derecha(){
+  if (keyPressed && key=="right"){
+    print("derecha");
+    x = x +1;
+  }}
+
+void izquierda(){
+  if (keyPressed && key=="left"){
+    print("izquierda");
+    x = x -1;
+  }}
