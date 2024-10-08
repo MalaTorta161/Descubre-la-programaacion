@@ -1,6 +1,6 @@
-int x=160;
-int y=160;
-
+double x = 160;
+double y = 160;
+double abajo1 = 2;
   
   void main(){
  animate(ejecutar);
@@ -22,25 +22,37 @@ void player(){
 void arriba(){
   if (keyPressed && key=="up"){
     print("arriba");
-    y = y -1;
-    
- 
-  
+    y = y -2;
+      
   }}
 void abajo (){
    if (keyPressed && key=="down"){
     print("abajo");
-    y = y +1;
-   }}
+    
+     y = y + abajo1;
+   
+    if(y > 312){
+      
+      abajo1 = 0;
+   
+    
+     
+    }
+    }
+   
+   
+   }
 
 void derecha(){
   if (keyPressed && key=="right"){
     print("derecha");
-    x = x +1;
+    x = x +2;
   }}
 
 void izquierda(){
   if (keyPressed && key=="left"){
     print("izquierda");
-    x = x -1;
-  }}
+    x = x -2;
+  }
+}
+
