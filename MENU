@@ -1,0 +1,50 @@
+void main(){
+  image("https://img.freepik.com/fotos-premium/dormitorio-sala-juegos-arte-pixeles-fondo-consolas-videojuegos-estilo-retro-ia-juegos-8-bits_985124-809.jpg?w=1380", 0,0, 320,320);
+	animate(menuprincipal);
+}
+
+void menuprincipal(){
+  JUGAR();
+  INSTRUCCIONES();
+
+}
+
+void JUGAR(){
+  fill(255,255,255);
+  rect(90,70,150,40);
+  fill(0,0,0);
+  text("Jugar",140,97);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+  if (mousePressed);
+  animate(JugarColor);
+  {
+   if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+   {
+    fill(255,0,48);
+   rect(90,70,150,40);
+   fill(0,0,0);
+   text("Jugar",140,97);
+   }}}
+void JugarColor(){
+  animate(JUGAR);
+}
+
+void INSTRUCCIONES(){
+  fill(255,255,255);
+  rect(90,130,150,40);
+  fill(0,0,0);
+  text("Instrucciones",113,158);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=130 && mouseY<=130+40);
+  if (mousePressed);
+  animate(InstruccionesColor);
+  {
+    if (mouseX>=90 && mouseX<=90+150 && mouseY>=130 && mouseY<=130+40);
+    {
+      fill(255,0,48);
+      rect(90,130,150,40);
+      fill(0,0,0);
+      text("Instrucciones",113,158);
+    }}}
+void InstruccionesColor(){
+  animate(INSTRUCCIONES);
+}
