@@ -6,7 +6,7 @@ void main(){
 void menuprincipal(){
   JUGAR();
   INSTRUCCIONES();
-
+	CREDITOS();
 }
 
 void JUGAR(){
@@ -27,6 +27,7 @@ void JUGAR(){
    }}}
 void JugarColor(){
   animate(JUGAR);
+
 }
 
 void INSTRUCCIONES(){
@@ -46,5 +47,73 @@ void INSTRUCCIONES(){
       text("Instrucciones",113,158);
     }}}
 void InstruccionesColor(){
-  animate(INSTRUCCIONES);
+  image("https://blog.phonehouse.es/wp-content/uploads/2017/11/corona-capital-8-bits.jpg", 0,0, 320,320);
+  fill(255,255,255);
+  text("Arriba--->W",140,100);
+  text("Abajo--->S",140,130);
+  text("Derecha--->D",140,160);
+  text("Izquierda--->A",140,190);
+	
+  fill(255,255,255);
+  rect(0,0,150,40);
+  fill(0,0,0);
+  text("Volver",50,30);
+ 	if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+  if (mousePressed);
+  animate(main);
+  {
+    if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+    {
+      fill(0,255,237);
+      rect(0,0,150,40);
+      fill(255,255,255);
+      text("Volver",50,30);
+    }
+  }
+
 }
+
+void CREDITOS(){
+   fill(255,255,255);
+   rect(90,190,150,40);
+   fill(0,0,0);
+  text("Clasificacion", 113,218);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
+  if (mousePressed);
+  animate(CreditosColor);
+  {
+    if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
+    {
+     fill(255,0,48);
+     rect(90,190,150,40);
+      fill(0,0,0);
+      text("Clasificacion", 113,218);
+      
+      
+      
+    }
+  }
+  
+ }
+
+void CreditosColor(){
+  background(24,24,24);
+  fill(255,255,255);
+  text("Hecho por: Alejandro", 113,218);
+  
+  fill(255,255,255);
+  rect(0,0,150,40);
+  fill(0,0,0);
+  text("Volver",50,30);
+ 	if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+  if (mousePressed);
+  animate(main);
+  {
+    if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+    {
+      fill(0,255,237);
+      rect(0,0,150,40);
+      fill(255,255,255);
+      text("Volver",50,30);
+      
+    }}}
