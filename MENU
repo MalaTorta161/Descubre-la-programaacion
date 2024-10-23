@@ -1,12 +1,17 @@
 void main(){
   image("https://img.freepik.com/fotos-premium/dormitorio-sala-juegos-arte-pixeles-fondo-consolas-videojuegos-estilo-retro-ia-juegos-8-bits_985124-809.jpg?w=1380", 0,0, 320,320);
 	animate(menuprincipal);
+
+
 }
 
 void menuprincipal(){
   JUGAR();
   INSTRUCCIONES();
 	CREDITOS();
+	
+
+
 }
 
 void JUGAR(){
@@ -45,9 +50,12 @@ void INSTRUCCIONES(){
       rect(90,130,150,40);
       fill(0,0,0);
       text("Instrucciones",113,158);
-    }}}
+    
+}}}
 void InstruccionesColor(){
-  image("https://blog.phonehouse.es/wp-content/uploads/2017/11/corona-capital-8-bits.jpg", 0,0, 320,320);
+  
+  
+  image("https://wallpapers.com/images/hd/8-bit-background-00eolrvv0ccowrjf.jpg", 0,0, 320,320);
   fill(255,255,255);
   text("Arriba--->W",140,100);
   text("Abajo--->S",140,130);
@@ -77,7 +85,7 @@ void CREDITOS(){
    fill(255,255,255);
    rect(90,190,150,40);
    fill(0,0,0);
-  text("Clasificacion", 113,218);
+  text("Creditos", 113,218);
   if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
   if (mousePressed);
   animate(CreditosColor);
@@ -87,7 +95,7 @@ void CREDITOS(){
      fill(255,0,48);
      rect(90,190,150,40);
       fill(0,0,0);
-      text("Clasificacion", 113,218);
+      text("Creditos", 113,218);
       
       
       
@@ -97,7 +105,7 @@ void CREDITOS(){
  }
 
 void CreditosColor(){
-  background(24,24,24);
+   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3mTaJ35prfHAdceZy94IxbptZ-TWsxVzTQ&s", 0,0, 320,320);
   fill(255,255,255);
   text("Hecho por: Alejandro", 113,218);
   
@@ -117,3 +125,4 @@ void CreditosColor(){
       text("Volver",50,30);
       
     }}}
+
