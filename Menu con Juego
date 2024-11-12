@@ -1,0 +1,215 @@
+double xld = 290;
+double xli = 30;
+double y = 160; double vy = 7;
+double x = 160; double vx =5;
+int p = 0;
+
+
+
+void main(){
+  image("https://img.freepik.com/fotos-premium/dormitorio-sala-juegos-arte-pixeles-fondo-consolas-videojuegos-estilo-retro-ia-juegos-8-bits_985124-809.jpg?w=1380", 0,0, 320,320);
+	animate(menuprincipal);
+	nombre1();
+
+}
+
+void menuprincipal(){
+  JUGAR();
+  INSTRUCCIONES();
+	CREDITOS();
+	
+
+
+}
+
+void JUGAR(){
+  fill(255,255,255);
+  rect(90,70,150,40);
+  fill(0,0,0);
+  text("Jugar",140,97);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+  if (mousePressed);
+  animate(JugarColor);
+  {
+   if (mouseX>=90 && mouseX<=90+150 && mouseY>=70 && mouseY<=70+40);
+   {
+    fill(255,0,48);
+   rect(90,70,150,40);
+   fill(0,0,0);
+   text("Jugar",140,97);
+   }}}
+void JugarColor(){
+  background(0,0,0);
+  image("http://static.cdn.ea.com/battlelog/prod/emblems/320/490/2832655241387166490.jpeg?v=1345636040.13",0,0,320,320);
+  textSize(20);
+  text(p,E,178);
+  fill(255,255,255,1);
+  double yi = mouseY;
+  double y1 = yi - 40;
+  double y2 = yi + 40;
+  stroke(255,255,255,1);
+  strokeWeight(2);
+  noFill();
+  rect(xli-10,y1,10,y2-y1);
+  rect(xld,y1,10,y2-y1);
+  fill(255,255,255,1);
+  stroke(255,255,255,1);
+  ellipse(x,y,10,10);
+  if (x-5==xli){
+    if(y>=y1){
+      if(y<=y2){
+        p = p + 1;
+        vx=5;
+      }
+    }
+  }
+  if(x+5==xld){
+    if(y>=y1){
+      if(y<=y2){
+        p = p + 1;
+        vx=-5;
+      }
+    }
+  }
+  x = x + vx;
+  if(y>=315){
+    y = 315;
+    vy = random(-4,-14);
+  }
+  if(y<=5){
+    y = 5;
+    vy=random(4,14);
+  }
+  y = y + vy;
+  
+  if(x>=315){
+    lose();
+  }
+  if(x<=5){
+    lose();
+  }
+  if(p>=10){
+    x=142;
+  }
+  if(p == 10){
+    win();
+  }
+}
+void lose(){
+  background(255,255,255,1);
+  fill(0,0,0,1);
+  image("https://img.freepik.com/vector-premium/game-over-estilo-retro-pixel-art-sobre-fondo-negro-concepto-nivel-final-juegos-virtuales-o-interfaz-usuario-clasica-videojuegos-online-mensaje-pantalla-videojuego-ilustracion-vectorial_342166-222.jpg",0,0,320,320);
+  textSize(18);
+  vy = 0;
+  vx = 0;
+}
+void win(){
+  background(255,255,255,1);
+  fill(0,0,0,1);
+  image("https://as1.ftcdn.net/v2/jpg/05/73/86/94/1000_F_573869438_VIjKt0t5GQ4oxnVW6IBrxXYhQOsyK9My.jpg",0,30,360,360);
+  textSize(18);
+  vy = 0;
+  vx = 0;
+}
+
+
+void INSTRUCCIONES(){
+  fill(255,255,255);
+  rect(90,130,150,40);
+  fill(0,0,0);
+  text("Instrucciones",113,158);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=130 && mouseY<=130+40);
+  if (mousePressed);
+  animate(InstruccionesColor);
+  {
+    if (mouseX>=90 && mouseX<=90+150 && mouseY>=130 && mouseY<=130+40);
+    {
+      fill(255,0,48);
+      rect(90,130,150,40);
+      fill(0,0,0);
+      text("Instrucciones",113,158);
+    
+}}}
+void InstruccionesColor(){
+  image("https://wallpapers.com/images/hd/8-bit-background-00eolrvv0ccowrjf.jpg", 0,0, 320,320);
+  fill(255,255,255);
+  text("Arriba--->W",140,100);
+  text("Abajo--->S",140,130);
+  text("Derecha--->D",140,160);
+  text("Izquierda--->A",140,190);
+	
+  fill(255,255,255);
+  rect(0,0,150,40);
+  fill(0,0,0);
+  text("Volver",50,30);
+ 	if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+  if (mousePressed);
+  animate(main);
+  {
+    if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+    {
+      fill(0,255,237);
+      rect(0,0,150,40);
+      fill(255,255,255);
+      text("Volver",50,30);
+    }
+  }
+
+}
+
+void CREDITOS(){
+   fill(255,255,255);
+   rect(90,190,150,40);
+   fill(0,0,0);
+  text("Creditos", 113,218);
+  if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
+  if (mousePressed);
+  animate(CreditosColor);
+  {
+    if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
+    {
+     fill(255,0,48);
+     rect(90,190,150,40);
+      fill(0,0,0);
+      text("Creditos", 113,218);
+      
+      
+      
+    }
+  }
+  
+ }
+
+void CreditosColor(){
+   image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3mTaJ35prfHAdceZy94IxbptZ-TWsxVzTQ&s", 0,0, 320,320);
+  fill(255,255,255);
+  text("Hecho por: Alejandro", 113,218);
+  
+  fill(255,255,255);
+  rect(0,0,150,40);
+  fill(0,0,0);
+  text("Volver",50,30);
+ 	if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+  if (mousePressed);
+  animate(main);
+  {
+    if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+    {
+      fill(0,255,237);
+      rect(0,0,150,40);
+      fill(255,255,255);
+      text("Volver",50,30);
+      
+    }}}
+
+void nombre1(){
+  text("Hola", 0,310);
+	int anchoHola = textWidth("Hola");
+	int anchoEspacio = textWidth(" ");
+	String nombre = "hola";
+	
+String Tunombre = readString("Escribe tu nombre");
+	String mensaje = "Hola, " + Tunombre + " Tu nombre se ha registrado correctamente";
+	println(mensaje);
+  text(Tunombre, anchoHola+anchoEspacio, 310);
+}
