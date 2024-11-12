@@ -1,0 +1,87 @@
+ double xld = 290;
+double xli = 30;
+double y = 160; double vy = 7;
+double x = 160; double vx =5;
+int p = 0;
+
+
+
+void main(){
+  animate(juego);
+}
+ 
+
+void juego(){
+background(0,0,0);
+ background(0,0,0);
+  image("http://static.cdn.ea.com/battlelog/prod/emblems/320/490/2832655241387166490.jpeg?v=1345636040.13",0,0,320,320);
+  textSize(20);
+  text(p,E,178);
+  fill(255,255,255,1);
+  double yi = mouseY;
+  double y1 = yi - 40;
+  double y2 = yi + 40;
+  stroke(255,255,255,1);
+  strokeWeight(2);
+  noFill();
+  rect(xli-10,y1,10,y2-y1);
+  rect(xld,y1,10,y2-y1);
+  fill(255,255,255,1);
+  stroke(255,255,255,1);
+  ellipse(x,y,10,10);
+  if (x-5==xli){
+    if(y>=y1){
+      if(y<=y2){
+        p = p + 1;
+        vx=5;
+      }
+    }
+  }
+  if(x+5==xld){
+    if(y>=y1){
+      if(y<=y2){
+        p = p + 1;
+        vx=-5;
+      }
+    }
+  }
+  x = x + vx;
+  if(y>=315){
+    y = 315;
+    vy = random(-4,-14);
+  }
+  if(y<=5){
+    y = 5;
+    vy=random(4,14);
+  }
+  y = y + vy;
+  
+  if(x>=315){
+    lose();
+  }
+  if(x<=5){
+    lose();
+  }
+  if(p>=10){
+    x=142;
+  }
+  if(p == 10){
+    win();
+  }
+}
+void lose(){
+  background(255,255,255,1);
+  fill(0,0,0,1);
+  image("https://i.ytimg.com/vi/br3OzOrARh4/maxresdefault.jpg",0,0,320,320);
+  textSize(18);
+  vy = 0;
+  vx = 0;
+}
+void win(){
+  background(255,255,255,1);
+  fill(0,0,0,1);
+  image("https://as1.ftcdn.net/v2/jpg/05/73/86/94/1000_F_573869438_VIjKt0t5GQ4oxnVW6IBrxXYhQOsyK9My.jpg",0,30,360,360);
+  textSize(18);
+  vy = 0;
+  vx = 0;
+}
