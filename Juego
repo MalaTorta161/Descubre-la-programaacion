@@ -12,21 +12,21 @@ void main(){
  
 
 void juego(){
-background(0,0,0);
- background(0,0,0);
-  image("http://static.cdn.ea.com/battlelog/prod/emblems/320/490/2832655241387166490.jpeg?v=1345636040.13",0,0,320,320);
+background(255,0,0);
+ background(255,0,0);
+  image("https://github.com/MalaTorta161/Descubre-la-programaacion/blob/main/GAMEBOY%20COLLECTION%20%5B1%5D.jpg?raw=true",0,0,320,320);
   textSize(20);
   text(p,E,178);
-  fill(255,255,255,1);
+  fill(0,215,210);
   double yi = mouseY;
   double y1 = yi - 40;
   double y2 = yi + 40;
-  stroke(255,255,255,1);
+  stroke(64,0,255);
   strokeWeight(2);
   noFill();
   rect(xli-10,y1,10,y2-y1);
   rect(xld,y1,10,y2-y1);
-  fill(255,255,255,1);
+  fill(255,0,0);
   stroke(255,255,255,1);
   ellipse(x,y,10,10);
   if (x-5==xli){
