@@ -3,13 +3,12 @@ double xli = 30;
 double y = 160; double vy = 7;
 double x = 160; double vx =5;
 int p = 0;
-
+String nombre;
 
 
 void main(){
   image("https://img.freepik.com/fotos-premium/dormitorio-sala-juegos-arte-pixeles-fondo-consolas-videojuegos-estilo-retro-ia-juegos-8-bits_985124-809.jpg?w=1380", 0,0, 320,320);
 	animate(menuprincipal);
-	nombre1();
 
 }
 
@@ -17,7 +16,7 @@ void menuprincipal(){
   JUGAR();
   INSTRUCCIONES();
 	CREDITOS();
-	
+	nombre1();
 
 
 }
@@ -40,19 +39,20 @@ void JUGAR(){
    }}}
 void JugarColor(){
   background(0,0,0);
-  image("http://static.cdn.ea.com/battlelog/prod/emblems/320/490/2832655241387166490.jpeg?v=1345636040.13",0,0,320,320);
+  image("https://github.com/MalaTorta161/Descubre-la-programaacion/blob/main/GAMEBOY%20COLLECTION%20%5B1%5D.jpg?raw=true",0,0,320,320);
   textSize(20);
   text(p,E,178);
+  nombre1();
   fill(255,255,255,1);
   double yi = mouseY;
   double y1 = yi - 40;
   double y2 = yi + 40;
-  stroke(255,255,255,1);
+  stroke(0,116,255);
   strokeWeight(2);
   noFill();
   rect(xli-10,y1,10,y2-y1);
   rect(xld,y1,10,y2-y1);
-  fill(255,255,255,1);
+  fill(255,0,0);
   stroke(255,255,255,1);
   ellipse(x,y,10,10);
   if (x-5==xli){
@@ -88,17 +88,17 @@ void JugarColor(){
   if(x<=5){
     lose();
   }
-  if(p>=10){
+  if(p>=6){
     x=142;
   }
-  if(p == 10){
+  if(p == 6){
     win();
   }
 }
 void lose(){
   background(255,255,255,1);
   fill(0,0,0,1);
-  image("https://img.freepik.com/vector-premium/game-over-estilo-retro-pixel-art-sobre-fondo-negro-concepto-nivel-final-juegos-virtuales-o-interfaz-usuario-clasica-videojuegos-online-mensaje-pantalla-videojuego-ilustracion-vectorial_342166-222.jpg",0,0,320,320);
+  image("https://i.ytimg.com/vi/br3OzOrARh4/maxresdefault.jpg",0,0,320,320);
   textSize(18);
   vy = 0;
   vx = 0;
@@ -106,7 +106,7 @@ void lose(){
 void win(){
   background(255,255,255,1);
   fill(0,0,0,1);
-  image("https://as1.ftcdn.net/v2/jpg/05/73/86/94/1000_F_573869438_VIjKt0t5GQ4oxnVW6IBrxXYhQOsyK9My.jpg",0,30,360,360);
+  image("https://www.shutterstock.com/shutterstock/videos/1023524665/thumb/3.jpg?ip=x480",0,0,360,360);
   textSize(18);
   vy = 0;
   vx = 0;
@@ -133,10 +133,9 @@ void INSTRUCCIONES(){
 void InstruccionesColor(){
   image("https://wallpapers.com/images/hd/8-bit-background-00eolrvv0ccowrjf.jpg", 0,0, 320,320);
   fill(255,255,255);
-  text("Arriba--->W",140,100);
-  text("Abajo--->S",140,130);
-  text("Derecha--->D",140,160);
-  text("Izquierda--->A",140,190);
+  text("mover raton hacia arriba",100,100);
+  text("mover raton hacia abajo",100,160);
+ 	nombre1();
 	
   fill(255,255,255);
   rect(0,0,150,40);
@@ -162,7 +161,7 @@ void CREDITOS(){
    rect(90,190,150,40);
    fill(0,0,0);
   text("Creditos", 113,218);
-  if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
+ if (mouseX>=90 && mouseX<=90+150 && mouseY>=190 && mouseY<=190+40);
   if (mousePressed);
   animate(CreditosColor);
   {
@@ -189,7 +188,8 @@ void CreditosColor(){
   rect(0,0,150,40);
   fill(0,0,0);
   text("Volver",50,30);
- 	if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
+ 	 nombre1();
+  if (mouseX>=0 && mouseX<=0+150 && mouseY>=0 && mouseY<=0+40);
   if (mousePressed);
   animate(main);
   {
@@ -201,15 +201,9 @@ void CreditosColor(){
       text("Volver",50,30);
       
     }}}
-
 void nombre1(){
-  text("Hola", 0,310);
-	int anchoHola = textWidth("Hola");
-	int anchoEspacio = textWidth(" ");
-	String nombre = "hola";
-	
-String Tunombre = readString("Escribe tu nombre");
-	String mensaje = "Hola, " + Tunombre + " Tu nombre se ha registrado correctamente";
-	println(mensaje);
-  text(Tunombre, anchoHola+anchoEspacio, 310);
+ fill(233,255,0);
+ text(nombre,5, 315);
 }
+ {nombre = readString("Dime tu nombre");
+   animate(menuprincipal);}
