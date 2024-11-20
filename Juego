@@ -1,4 +1,4 @@
- double xld = 290;
+double xld = 290;
 double xli = 30;
 double y = 160; double vy = 7;
 double x = 160; double vx =5;
@@ -62,10 +62,10 @@ background(255,0,0);
   if(x<=5){
     lose();
   }
-  if(p>=10){
+  if(p>=6){
     x=142;
   }
-  if(p == 10){
+  if(p == 6){
     win();
   }
 }
@@ -80,7 +80,7 @@ void lose(){
 void win(){
   background(255,255,255,1);
   fill(0,0,0,1);
-  image("https://as1.ftcdn.net/v2/jpg/05/73/86/94/1000_F_573869438_VIjKt0t5GQ4oxnVW6IBrxXYhQOsyK9My.jpg",0,30,360,360);
+  image("https://www.shutterstock.com/shutterstock/videos/1023524665/thumb/3.jpg?ip=x480",0,30,360,360);
   textSize(18);
   vy = 0;
   vx = 0;
