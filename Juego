@@ -80,7 +80,7 @@ void lose(){
 void win(){
   background(255,255,255,1);
   fill(0,0,0,1);
-  image("https://www.shutterstock.com/shutterstock/videos/1023524665/thumb/3.jpg?ip=x480",0,30,360,360);
+  image("https://www.shutterstock.com/shutterstock/videos/1023524665/thumb/3.jpg?ip=x480",0,0,360,360);
   textSize(18);
   vy = 0;
   vx = 0;
