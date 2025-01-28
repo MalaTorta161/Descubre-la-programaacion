@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://7agcrrvg42mm"]
+
+[ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_qim44"]
+[ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_04045"]
+[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio/65. Otherworld Underground.mp3" id="2_gkeae"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio/interface-124464.mp3" id="4_jclrf"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4w61l"]
+
+[node name="Mundo" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_qim44")
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(574, 329)
+scale = Vector2(0.596875, 0.605556)
+texture = ExtResource("2_04045")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 358.0
+offset_top = 212.0
+offset_right = 891.0
+offset_bottom = 562.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+material = SubResource("CanvasItemMaterial_4w61l")
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Nueva Partida"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Controles"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Creditos"
+
+[node name="sonidos" type="Node2D" parent="." groups=["sonidos"]]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gkeae")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jclrf")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
