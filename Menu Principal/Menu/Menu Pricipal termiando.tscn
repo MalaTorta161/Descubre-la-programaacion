@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://7agcrrvg42mm"]
+[gd_scene load_steps=11 format=4 uid="uid://53g7dowxatwb"]
 
-[ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_qim44"]
-[ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_04045"]
-[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="2_gkeae"]
-[ext_resource type="Script" path="res://Menu/button.gd" id="3_oaob5"]
-[ext_resource type="Script" path="res://Menu/button_2.gd" id="3_tx8o6"]
-[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="4_jclrf"]
-[ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="6_5ynp1"]
-[ext_resource type="Script" path="res://Menu/button_3.gd" id="7_mpym6"]
+[ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_2t0kq"]
+[ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_m15nu"]
+[ext_resource type="Script" path="res://Menu/button.gd" id="3_nrt6p"]
+[ext_resource type="Script" path="res://Menu/button_2.gd" id="4_elapy"]
+[ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="5_i4peb"]
+[ext_resource type="Script" path="res://Menu/button_3.gd" id="6_ylajw"]
+[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="7_283b3"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="8_sr4xm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4w61l"]
 
@@ -16,12 +16,12 @@ data = PackedByteArray("//vQxAAAJOGlSPWHgC8pRefDO6AAA6QkUUoZRl23zYAioiooIqRMQtug
 
 [node name="Mundo" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_qim44")
+script = ExtResource("1_2t0kq")
 
 [node name="fondo" type="Sprite2D" parent="."]
 position = Vector2(574, 329)
 scale = Vector2(0.596875, 0.605556)
-texture = ExtResource("2_04045")
+texture = ExtResource("2_m15nu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 358.0
@@ -34,7 +34,7 @@ material = SubResource("CanvasItemMaterial_4w61l")
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Nueva Partida"
-script = ExtResource("3_oaob5")
+script = ExtResource("3_nrt6p")
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
 stream = SubResource("AudioStreamMP3_rgtpv")
@@ -43,29 +43,29 @@ stream = SubResource("AudioStreamMP3_rgtpv")
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Controles"
-script = ExtResource("3_tx8o6")
+script = ExtResource("4_elapy")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
-stream = ExtResource("6_5ynp1")
+stream = ExtResource("5_i4peb")
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Creditos"
-script = ExtResource("7_mpym6")
+script = ExtResource("6_ylajw")
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="VBoxContainer/Button3"]
-stream = ExtResource("6_5ynp1")
+stream = ExtResource("5_i4peb")
 
 [node name="sonidos" type="Node2D" parent="." groups=["sonidos"]]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_gkeae")
+stream = ExtResource("7_283b3")
 volume_db = -9.369
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_jclrf")
+stream = ExtResource("8_sr4xm")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

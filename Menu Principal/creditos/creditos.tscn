@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://big8ccluo5f68"]
 
 [ext_resource type="Script" path="res://creditos/creditos.gd" id="1_17ri5"]
-[ext_resource type="AudioStream" uid="uid://big2akxa7211q" path="res://audio/1-49. Gate.mp3" id="2_fujwp"]
+[ext_resource type="AudioStream" uid="uid://big2akxa7211q" path="res://audio de fondo/1-49. Gate.mp3" id="2_fujwp"]
 [ext_resource type="Texture2D" uid="uid://bv0yboee8mv11" path="res://Sprites/red-flame-8-bit-sdkdc3vu49mcav07.webp" id="3_rv748"]
 
 [node name="creditos" type="Node2D"]

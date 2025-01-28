@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dg8fr0pdn5suc"]
 
 [ext_resource type="Script" path="res://controles/controles.gd" id="1_ihhmn"]
-[ext_resource type="AudioStream" uid="uid://q0pfmhrs7588" path="res://audio/11. Lost.mp3" id="2_tfukp"]
+[ext_resource type="AudioStream" uid="uid://q0pfmhrs7588" path="res://audio de fondo/11. Lost.mp3" id="2_tfukp"]
 [ext_resource type="Texture2D" uid="uid://npnxj7r02wy" path="res://Sprites/cool-retro-design-computer-keyboard-nwlezutue2ayoo0t.webp" id="3_qoo2l"]
 
 [sub_resource type="Curve" id="Curve_3s20r"]
