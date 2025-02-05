@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q0pfmhrs7588"
+path="res://.godot/imported/11. Lost.mp3-465e5a0df5d92fc17324f29f6579742e.mp3str"
+
+[deps]
+
+source_file="res://audio de fondo/11. Lost.mp3"
+dest_files=["res://.godot/imported/11. Lost.mp3-465e5a0df5d92fc17324f29f6579742e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

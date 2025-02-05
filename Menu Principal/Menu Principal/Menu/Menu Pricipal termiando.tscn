@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=4 uid="uid://53g7dowxatwb"]
+
+[ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_2t0kq"]
+[ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_m15nu"]
+[ext_resource type="Script" path="res://Menu/button.gd" id="3_nrt6p"]
+[ext_resource type="Script" path="res://Menu/button_2.gd" id="4_elapy"]
+[ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="5_i4peb"]
+[ext_resource type="Script" path="res://Menu/button_3.gd" id="6_ylajw"]
+[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="7_283b3"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="8_sr4xm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4w61l"]
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_rgtpv"]
+data = PackedByteArray("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DhwHCYiD2axqItidJ5mAvrHInHX5///////wEYgQEIjIEkCugEMgUFLVlrAYEoWgImHBJbgMC2ROFL5byGm4ujJnalUzBkSi3/////////6TpEDBgAFQlNEAhCMgkEjoONAJZZXoOA1NyoDPMCgFMcaEP/////2kvrKKerDrcn2n4zjKnhiMhfaVUMkVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==")
+
+[node name="Mundo" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_2t0kq")
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(574, 329)
+scale = Vector2(0.596875, 0.605556)
+texture = ExtResource("2_m15nu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 358.0
+offset_top = 212.0
+offset_right = 891.0
+offset_bottom = 562.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+material = SubResource("CanvasItemMaterial_4w61l")
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Nueva Partida"
+script = ExtResource("3_nrt6p")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
+stream = SubResource("AudioStreamMP3_rgtpv")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Controles"
+script = ExtResource("4_elapy")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
+stream = ExtResource("5_i4peb")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Creditos"
+script = ExtResource("6_ylajw")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="VBoxContainer/Button3"]
+stream = ExtResource("5_i4peb")
+
+[node name="sonidos" type="Node2D" parent="." groups=["sonidos"]]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_283b3")
+volume_db = -9.369
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_sr4xm")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_button_down"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="VBoxContainer/Button3" method="_on_button_down"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
