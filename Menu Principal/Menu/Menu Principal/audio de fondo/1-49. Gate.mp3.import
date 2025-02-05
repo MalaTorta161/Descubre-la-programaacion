@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://big2akxa7211q"
+path="res://.godot/imported/1-49. Gate.mp3-1c88828fb34c83fef773c8c0a6da213d.mp3str"
+
+[deps]
+
+source_file="res://audio de fondo/1-49. Gate.mp3"
+dest_files=["res://.godot/imported/1-49. Gate.mp3-1c88828fb34c83fef773c8c0a6da213d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
