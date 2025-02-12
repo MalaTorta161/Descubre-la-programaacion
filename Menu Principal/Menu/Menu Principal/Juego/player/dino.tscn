@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://bll4a7cshv5ls"]
+[gd_scene load_steps=24 format=3 uid="uid://bll4a7cshv5ls"]
 
+[ext_resource type="Script" path="res://Juego/player/dino.gd" id="1_doeu5"]
 [ext_resource type="Texture2D" uid="uid://c525jycvvecyd" path="res://Juego/player/mort.png" id="1_snsuj"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://Juego/player/Sonido Salto/jump.wav" id="2_5ni2x"]
 
@@ -152,13 +153,17 @@ size = Vector2(10, 16)
 size = Vector2(10, 14)
 
 [node name="Dino" type="CharacterBody2D"]
+z_index = 1
 scale = Vector2(8, 8)
+script = ExtResource("1_doeu5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_n7uct")
 animation = &"Agachado"
 autoplay = "Inactivo"
+frame = 5
+frame_progress = 0.588166
 
 [node name="Correr Col" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
