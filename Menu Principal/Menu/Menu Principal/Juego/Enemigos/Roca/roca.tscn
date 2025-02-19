@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dse866f2ahmyu"]
+
+[ext_resource type="Texture2D" uid="uid://dkw6thaio0hfe" path="res://Juego/Enemigos/Roca/rock.png" id="1_e0i4b"]
+
+[node name="Roca" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_e0i4b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(-16.25, -9.75, -21.75, 2.5, -20.5, 11.25, 23, 11, -5.5, -11.25)

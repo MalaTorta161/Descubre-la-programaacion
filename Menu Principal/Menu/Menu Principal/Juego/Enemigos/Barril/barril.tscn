@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck7jrfefroww8"]
+
+[ext_resource type="Texture2D" uid="uid://c2na8iq62xim6" path="res://Juego/Enemigos/Barril/barrel.png" id="1_rpuuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahlhs"]
+size = Vector2(108, 105)
+
+[node name="Barril" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_rpuuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ahlhs")

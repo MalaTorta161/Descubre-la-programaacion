@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://tp5d06y8t685"]
+
+[ext_resource type="Texture2D" uid="uid://dyasm1fruq87r" path="res://Juego/Enemigos/Pajaro/Bird.png" id="1_xwscx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecwye"]
+atlas = ExtResource("1_xwscx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnc4r"]
+atlas = ExtResource("1_xwscx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbnll"]
+atlas = ExtResource("1_xwscx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cudku"]
+atlas = ExtResource("1_xwscx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7orn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecwye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnc4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cudku")
+}],
+"loop": true,
+"name": &"Volar",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xw1b"]
+radius = 35.0
+height = 86.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14si2"]
+size = Vector2(40, 52)
+
+[node name="Pajaro" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t7orn")
+animation = &"Volar"
+autoplay = "Volar"
+frame_progress = 0.253508
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -3)
+shape = SubResource("CapsuleShape2D_8xw1b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-40, 2)
+shape = SubResource("RectangleShape2D_14si2")

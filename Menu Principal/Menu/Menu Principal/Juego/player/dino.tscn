@@ -160,10 +160,8 @@ script = ExtResource("1_doeu5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_n7uct")
-animation = &"Agachado"
+animation = &"Saltar"
 autoplay = "Inactivo"
-frame = 5
-frame_progress = 0.588166
 
 [node name="Correr Col" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
