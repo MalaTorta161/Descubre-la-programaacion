@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://csruk0226ks4t"]
+[gd_scene load_steps=6 format=3 uid="uid://csruk0226ks4t"]
 
 [ext_resource type="PackedScene" uid="uid://bpo1os7sfbbqf" path="res://Juego/Background/parallax_background.tscn" id="1_bf6yt"]
 [ext_resource type="Script" path="res://Juego/Principal/principal.gd" id="1_vlcqn"]
 [ext_resource type="PackedScene" uid="uid://rxygtxec8bma" path="res://Juego/Suelo en movimiento/static_body_2d.tscn" id="2_3sjka"]
 [ext_resource type="PackedScene" uid="uid://bll4a7cshv5ls" path="res://Juego/player/dino.tscn" id="3_sfsfu"]
+[ext_resource type="PackedScene" uid="uid://bhxyrro4rktgp" path="res://Juego/Puntuacion/hud.tscn" id="5_ave7m"]
 
 [node name="Principal" type="Node"]
 script = ExtResource("1_vlcqn")
@@ -17,3 +18,5 @@ position = Vector2(157, 497)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
+
+[node name="HUD" parent="." instance=ExtResource("5_ave7m")]

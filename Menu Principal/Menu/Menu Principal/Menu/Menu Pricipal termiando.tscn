@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://Menu/button_2.gd" id="4_elapy"]
 [ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="5_i4peb"]
 [ext_resource type="Script" path="res://Menu/button_3.gd" id="6_ylajw"]
-[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="7_283b3"]
-[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="8_sr4xm"]
+[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio/65. Otherworld Underground.mp3" id="7_283b3"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio/interface-124464.mp3" id="8_sr4xm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4w61l"]
 
