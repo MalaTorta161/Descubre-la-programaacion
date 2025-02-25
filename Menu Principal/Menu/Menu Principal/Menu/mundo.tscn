@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_qim44"]
 [ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_04045"]
-[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio/65. Otherworld Underground.mp3" id="2_gkeae"]
+[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="2_gkeae"]
 [ext_resource type="Script" path="res://Menu/button.gd" id="3_oaob5"]
 [ext_resource type="Script" path="res://Menu/button_2.gd" id="3_tx8o6"]
-[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio/interface-124464.mp3" id="4_jclrf"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="4_jclrf"]
 [ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="6_5ynp1"]
 [ext_resource type="Script" path="res://Menu/button_3.gd" id="7_mpym6"]
 

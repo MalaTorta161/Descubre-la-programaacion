@@ -7,15 +7,18 @@ const JUMP_SPEED = -1800
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	if is_on_floor():
-		$"Correr Col".disabled = false
-		if Input.is_action_pressed("ui_accept"):
-			velocity.y = JUMP_SPEED
-			#$JumpSound.play()
-		elif Input.is_action_pressed("ui_down"):
-			$AnimatedSprite2D.play("Agachado")
-			$"Correr Col".disabled = true
+		if not get_parent().game_running:
+			$AnimatedSprite2D.play("Inactivo")
 		else:
-			$AnimatedSprite2D.play("Correr")
+			$"Correr Col".disabled = false
+			if Input.is_action_pressed("ui_accept"):
+				velocity.y = JUMP_SPEED
+				#$JumpSound.play()
+			elif Input.is_action_pressed("ui_down"):
+				$AnimatedSprite2D.play("Agachado")
+				$"Correr Col".disabled = true
+			else:
+				$AnimatedSprite2D.play("Correr")
 	else:
 		$AnimatedSprite2D.play("Saltar")
 		

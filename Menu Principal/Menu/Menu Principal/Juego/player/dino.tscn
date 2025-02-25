@@ -160,7 +160,7 @@ script = ExtResource("1_doeu5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_n7uct")
-animation = &"Saltar"
+animation = &"Inactivo"
 autoplay = "Inactivo"
 
 [node name="Correr Col" type="CollisionShape2D" parent="."]

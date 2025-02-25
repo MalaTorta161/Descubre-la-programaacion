@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmdtqxaxry1q5"]
 
-[ext_resource type="Texture2D" uid="uid://ca01iuenpdkvj" path="res://Juego/Enemigos/Tocon/stump.png" id="1_tmktq"]
+[ext_resource type="Texture2D" uid="uid://ca01iuenpdkvj" path="res://Juego/Enemigos/stump.png" id="1_tmktq"]
 
 [node name="Tocon" type="Area2D"]
 
