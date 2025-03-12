@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://csruk0226ks4t"]
+
+[ext_resource type="PackedScene" uid="uid://bpo1os7sfbbqf" path="res://Juego/Background/parallax_background.tscn" id="1_bf6yt"]
+[ext_resource type="Script" uid="uid://bf12lncjc1tlt" path="res://Juego/Principal/principal.gd" id="1_vlcqn"]
+[ext_resource type="PackedScene" uid="uid://rxygtxec8bma" path="res://Juego/Suelo en movimiento/static_body_2d.tscn" id="2_3sjka"]
+[ext_resource type="PackedScene" uid="uid://bll4a7cshv5ls" path="res://Juego/player/dino.tscn" id="3_sfsfu"]
+[ext_resource type="PackedScene" uid="uid://bhxyrro4rktgp" path="res://Juego/Puntuacion/hud.tscn" id="5_ave7m"]
+[ext_resource type="PackedScene" uid="uid://jqgm14ojwv7x" path="res://Juego/Game Over/game_over.tscn" id="6_e2pgs"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://Juego/Puntuacion/retro.ttf" id="7_4hqvj"]
+[ext_resource type="AudioStream" uid="uid://bpigmej4kway4" path="res://audio de fondo/8-bit-music-on-245249.mp3" id="8_aa5y2"]
+
+[node name="Principal" type="Node"]
+script = ExtResource("1_vlcqn")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_bf6yt")]
+
+[node name="Suelo" parent="." instance=ExtResource("2_3sjka")]
+
+[node name="Dino" parent="." instance=ExtResource("3_sfsfu")]
+position = Vector2(157, 497)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="HUD" parent="." instance=ExtResource("5_ave7m")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_e2pgs")]
+process_mode = 2
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = -1.0
+offset_top = 595.0
+offset_right = 139.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("7_4hqvj")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_aa5y2")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

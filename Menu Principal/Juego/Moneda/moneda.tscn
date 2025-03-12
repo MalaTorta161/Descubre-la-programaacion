@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c0o8n846v5xig"]
+
+[node name="Moneda" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(222, 93)
+scale = Vector2(1.00644, 0.933657)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

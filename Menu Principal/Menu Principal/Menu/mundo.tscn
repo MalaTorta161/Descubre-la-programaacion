@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://7agcrrvg42mm"]
+[gd_scene load_steps=12 format=4 uid="uid://7agcrrvg42mm"]
 
-[ext_resource type="Script" path="res://Menu/Mundo.gd" id="1_qim44"]
-[ext_resource type="Texture2D" uid="uid://c2naeuhb560sw" path="res://Sprites/gloomy-weather-8-bit-k1iki5wb16jb3wnn.webp" id="2_04045"]
-[ext_resource type="AudioStream" uid="uid://d32trlejaoom4" path="res://audio de fondo/65. Otherworld Underground.mp3" id="2_gkeae"]
-[ext_resource type="Script" path="res://Menu/button.gd" id="3_oaob5"]
-[ext_resource type="Script" path="res://Menu/button_2.gd" id="3_tx8o6"]
-[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="4_jclrf"]
-[ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="6_5ynp1"]
-[ext_resource type="Script" path="res://Menu/button_3.gd" id="7_mpym6"]
+[ext_resource type="Script" uid="uid://c0wmv5isb8jkg" path="res://Menu Principal/Menu/Mundo.gd" id="1_60po5"]
+[ext_resource type="Texture2D" uid="uid://bydk0gmt7f8w2" path="res://Sprites/jungle-landscape-pixel-art-style.jpg" id="2_gxmim"]
+[ext_resource type="FontFile" uid="uid://m2o7geveaxyp" path="res://Fuentes/Daydream.ttf" id="3_bxe0h"]
+[ext_resource type="Script" uid="uid://c5nygxowyukne" path="res://Menu Principal/Menu/button.gd" id="4_7rdk5"]
+[ext_resource type="Script" uid="uid://df8urcccmxxb0" path="res://Menu Principal/Menu/button_2.gd" id="5_qkshg"]
+[ext_resource type="AudioStream" uid="uid://cyla7561010wi" path="res://audio botones/select_denied_04-96602.mp3" id="6_xgyxj"]
+[ext_resource type="Script" uid="uid://cv0wjy0ow4syg" path="res://Menu Principal/Menu/button_3.gd" id="7_8680v"]
+[ext_resource type="AudioStream" uid="uid://bpigmej4kway4" path="res://audio de fondo/8-bit-music-on-245249.mp3" id="8_60po5"]
+[ext_resource type="AudioStream" uid="uid://omxkkjsak8dy" path="res://audio de fondo/interface-124464.mp3" id="9_5ir3t"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4w61l"]
 
@@ -16,56 +17,65 @@ data = PackedByteArray("//vQxAAAJOGlSPWHgC8pRefDO6AAA6QkUUoZRl23zYAioiooIqRMQtug
 
 [node name="Mundo" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_qim44")
+script = ExtResource("1_60po5")
 
 [node name="fondo" type="Sprite2D" parent="."]
-position = Vector2(574, 329)
-scale = Vector2(0.596875, 0.605556)
-texture = ExtResource("2_04045")
+position = Vector2(578, 323)
+scale = Vector2(0.373377, 0.281034)
+texture = ExtResource("2_gxmim")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 358.0
+offset_left = 202.0
 offset_top = 212.0
-offset_right = 891.0
-offset_bottom = 562.0
+offset_right = 970.0
+offset_bottom = 502.0
 
 [node name="Button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 material = SubResource("CanvasItemMaterial_4w61l")
 layout_mode = 2
-theme_override_font_sizes/font_size = 70
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_bxe0h")
+theme_override_font_sizes/font_size = 50
 text = "Nueva Partida"
-script = ExtResource("3_oaob5")
+script = ExtResource("4_7rdk5")
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
 stream = SubResource("AudioStreamMP3_rgtpv")
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 70
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_bxe0h")
+theme_override_font_sizes/font_size = 50
 text = "Controles"
-script = ExtResource("3_tx8o6")
+script = ExtResource("5_qkshg")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
-stream = ExtResource("6_5ynp1")
+stream = ExtResource("6_xgyxj")
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 70
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_bxe0h")
+theme_override_font_sizes/font_size = 50
 text = "Creditos"
-script = ExtResource("7_mpym6")
+script = ExtResource("7_8680v")
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="VBoxContainer/Button3"]
-stream = ExtResource("6_5ynp1")
+stream = ExtResource("6_xgyxj")
 
 [node name="sonidos" type="Node2D" parent="." groups=["sonidos"]]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_gkeae")
+stream = ExtResource("8_60po5")
 volume_db = -9.369
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_jclrf")
+stream = ExtResource("9_5ir3t")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

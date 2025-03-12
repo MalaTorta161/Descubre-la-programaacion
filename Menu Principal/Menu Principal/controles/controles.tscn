@@ -1,13 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dg8fr0pdn5suc"]
 
-[ext_resource type="Script" path="res://controles/controles.gd" id="1_ihhmn"]
+[ext_resource type="Script" uid="uid://d1fsg7nfabmhn" path="res://Menu Principal/controles/controles.gd" id="1_ihhmn"]
 [ext_resource type="AudioStream" uid="uid://q0pfmhrs7588" path="res://audio de fondo/11. Lost.mp3" id="2_tfukp"]
 [ext_resource type="Texture2D" uid="uid://npnxj7r02wy" path="res://Sprites/cool-retro-design-computer-keyboard-nwlezutue2ayoo0t.webp" id="3_qoo2l"]
-
-[sub_resource type="Curve" id="Curve_3s20r"]
-_data = [Vector2(0, 0.305263), 0.0, 0.0, 0, 0]
-point_count = 1
-metadata/_snap_count = 8
+[ext_resource type="FontFile" uid="uid://m2o7geveaxyp" path="res://Fuentes/Daydream.ttf" id="4_1yegx"]
 
 [sub_resource type="Curve" id="Curve_givfc"]
 _data = [Vector2(0, 0.305263), 0.0, 0.0, 0, 0]
@@ -25,78 +21,47 @@ position = Vector2(587.5, 305)
 scale = Vector2(1.94111, 2.01333)
 texture = ExtResource("3_qoo2l")
 
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-890, -39)
-scale = Vector2(1.35833, 0.97351)
-points = PackedVector2Array(874.601, 373.905, 733.251, 405.748)
-width_curve = SubResource("Curve_3s20r")
-default_color = Color(1, 0, 1, 1)
-
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(-874, 10)
+position = Vector2(-359, 95)
 scale = Vector2(1.33333, 0.913907)
-points = PackedVector2Array(921.002, 345.768, 909.002, 520.841)
+points = PackedVector2Array(921.002, 345.768, 915.752, 440.964)
 width_curve = SubResource("Curve_givfc")
 default_color = Color(1, 0, 1, 1)
 
 [node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(-204, 43)
+position = Vector2(-93, 128)
 scale = Vector2(1.33333, 0.913907)
-points = PackedVector2Array(456.001, 312.942, 576.001, 486.921)
+points = PackedVector2Array(456.001, 312.942, 489.265, 361.169, 519.751, 403.761)
 width_curve = SubResource("Curve_givfc")
 default_color = Color(1, 0, 1, 1)
-
-[node name="Line2D4" type="Line2D" parent="."]
-position = Vector2(-335, -97)
-scale = Vector2(1.33333, 0.911122)
-points = PackedVector2Array(506.251, 406.093, 502.501, 226.095)
-width_curve = SubResource("Curve_givfc")
-default_color = Color(1, 0, 1, 1)
-
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 89.0
-offset_top = 293.0
-offset_right = 241.0
-offset_bottom = 347.0
-rotation = 1.309
-theme_override_font_sizes/font_size = 30
-text = "Izquierda"
-editable = false
 
 [node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 270.0
-offset_top = 486.0
-offset_right = 400.0
-offset_bottom = 542.0
+offset_left = 773.0
+offset_top = 498.0
+offset_right = 977.0
+offset_bottom = 553.0
 theme_override_font_sizes/font_size = 30
-text = "  Abajo"
+text = " AGACHARSE"
 editable = false
 
 [node name="TextEdit3" type="TextEdit" parent="."]
-offset_left = 486.0
+offset_left = 540.0
 offset_top = 533.0
-offset_right = 640.0
+offset_right = 694.0
 offset_bottom = 589.0
 rotation = -0.523598
 theme_override_font_sizes/font_size = 30
-text = "  Derecha"
-editable = false
-
-[node name="TextEdit4" type="TextEdit" parent="."]
-offset_left = 267.0
-offset_top = 55.0
-offset_right = 405.0
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 30
-text = "  Arriba"
+text = "  SALTAR"
 editable = false
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 offset_left = 1.0
 offset_top = 600.0
 offset_right = 116.0
 offset_bottom = 650.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("4_1yegx")
+theme_override_font_sizes/font_size = 25
 text = "back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
